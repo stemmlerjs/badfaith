@@ -14,11 +14,39 @@ const MEDIA_QUERY = graphql`
 }
 `
 
+function formatTime (duration)
+  {   
+      // Hours, minutes and seconds
+      var hrs = ~~(duration / 3600);
+      var mins = ~~((duration % 3600) / 60);
+      var secs = ~~duration % 60;
+  
+      // Output like "1:01" or "4:03:59" or "123:03:59"
+      var ret = "";
+  
+      if (hrs > 0) {
+          ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+      }
+  
+      ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+      ret += "" + secs;
+      return ret;
+  }
+
 function usePlayer (playerRef) {
   let [isPlaying, setIsPlaying] = useState(false);
+  let [currentTime, setCurrentTime] = useState(0);
+  let [duration, setDuration] = useState(0);
 
   useEffect(() => {
+    playerRef.current.audioEl.current.addEventListener('timeupdate', updateTime, false);
+    playerRef.current.audioEl.current.addEventListener('ended', onEnded, false)
   }, [playerRef])
+
+  const updateTime = (e) => {
+    setCurrentTime(playerRef.current.audioEl.current.currentTime)
+    setDuration(playerRef.current.audioEl.current.duration)
+  }
 
   const play = () => {
     playerRef.current.audioEl.current.play();
@@ -38,9 +66,13 @@ function usePlayer (playerRef) {
     }
   }
 
+  const onEnded = () => {
+    setIsPlaying(false);
+  }
+
   return { 
-    operations: { togglePlayer },
-    models: { isPlaying } 
+    operations: { togglePlayer, onEnded },
+    models: { isPlaying, currentTime, duration } 
   }
 }
 
@@ -48,7 +80,7 @@ const Player = () => {
   const playerRef = useRef(null);
   const { operations, models } = usePlayer(playerRef);
   const { file: { publicURL } } = useStaticQuery(MEDIA_QUERY);
-
+  
   return (
     <div>
       <section className="player-controls">
@@ -66,15 +98,16 @@ const Player = () => {
           )}
         </div>
         <div className="time">
-          <div>0:12 of 3:02</div>
+          <div>{formatTime(models.currentTime)} of {formatTime(models.duration)}</div>
         </div>
       </section>
       <div style={{ display: 'none' }}>
         <ReactAudioPlayer
           src={publicURL}
           autoPlay={false}
-          controls
+          controls={false}
           ref={playerRef}
+          onEnded={() => operations.onEnded()}
         />
       </div>
     </div>

@@ -39,7 +39,7 @@ Someday you and me are gonna die
 
 Scrapbook, baby just write it away
 
-<span id="distractions">Distractions</span>, baby just focus away
+<span id="distractions">Distractions</span>, baby focus away
 
 Gimme something that'll take it away
 
