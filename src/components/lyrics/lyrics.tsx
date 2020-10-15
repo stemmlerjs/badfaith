@@ -45,6 +45,7 @@ const Lyrics = () => {
   const onClickOutsideListener = () => {
     operations.closeAnnotation();
     document.removeEventListener("click", onClickOutsideListener)
+    turnOnScrolling();
   }
 
   const bindAnnotations = () => {
@@ -54,6 +55,7 @@ const Lyrics = () => {
         e.stopPropagation();
         operations.openAnnotation(a);
         document.addEventListener("click", onClickOutsideListener)
+        turnOffScrolling();
       })
     })
   }
@@ -67,18 +69,31 @@ const Lyrics = () => {
       document.documentElement.clientHeight
 
     const scrolled = winScroll + height * 0.20;
-    setScrollPosition(scrolled);
+
+    if (!models.currentAnnotation) {
+      console.log(models.currentAnnotation)
+      setScrollPosition(scrolled);
+    }
+  }
+
+  const turnOnScrolling = () => {
+    if (typeof window !== undefined) {
+      window.addEventListener('scroll', listenToScroll)
+    }
+  }
+
+  const turnOffScrolling = () => {
+    if (typeof window !== undefined) {
+      window.removeEventListener('scroll', listenToScroll)
+    }
   }
   
   useEffect(() => {
     bindAnnotations();
-    
-    if (typeof window !== undefined) {
-      window.addEventListener('scroll', listenToScroll)
-    }
+    turnOnScrolling();
   }, [annotations]);
 
-  console.log(scrollPosition);
+  console.log(models.currentAnnotation);
   
   return (
     <section className="lyrics">
