@@ -52,6 +52,7 @@ const Lyrics = () => {
     annotations.forEach((a) => {
       let span = document.getElementById(a.frontmatter.type);
       span.addEventListener('click', (e) => {
+        listenToScroll();
         e.stopPropagation();
         operations.openAnnotation(a);
         document.addEventListener("click", onClickOutsideListener)
