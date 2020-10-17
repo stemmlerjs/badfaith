@@ -1,21 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby'
+
 import React, { useEffect, useState } from 'react'
 import "./lyrics.sass"
-
-const QUERY = graphql`
-{
-  allMarkdownRemark {
-    edges {
-      node {
-        frontmatter {
-          type
-        }
-        html
-      }
-    }
-  }
-}
-`
 
 function useAnnotations () {
   let [currentAnnotation, setCurrentAnnotation] = useState(null);
@@ -34,12 +19,8 @@ function useAnnotations () {
   }
 }
 
-const Lyrics = () => {
+const Lyrics = ({ title, lyrics, annotations }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const { allMarkdownRemark: { edges }} = useStaticQuery(QUERY);
-  const all = edges.map((e) => e.node);
-  const lyrics = all.find((a) => a.frontmatter.type === 'lyrics');
-  const annotations = all.filter((a) => a.frontmatter.type !== 'lyrics')
   const { operations, models } = useAnnotations();
 
   const onClickOutsideListener = () => {
@@ -94,10 +75,9 @@ const Lyrics = () => {
     turnOnScrolling();
   }, [annotations]);
 
-  console.log(models.currentAnnotation);
-  
   return (
     <section className="lyrics">
+      <h1>{title}</h1>
       {models.currentAnnotation ? (
         <div
           style={{ top: `${scrollPosition}px`}}

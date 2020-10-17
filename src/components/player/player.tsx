@@ -8,8 +8,13 @@ const pauseButton = require('../../images/pause.svg')
 
 const MEDIA_QUERY = graphql`
 {
-  file(ext: {eq: ".mp3"}) {
-    publicURL
+  allFile(filter: {ext: {eq: ".mp3"}}) {
+    edges {
+      node {
+        publicURL
+        name
+      }
+    }
   }
 }
 `
@@ -76,10 +81,11 @@ function usePlayer (playerRef) {
   }
 }
 
-const Player = () => {
+const Player = ({ title }) => {
   const playerRef = useRef(null);
   const { operations, models } = usePlayer(playerRef);
-  const { file: { publicURL } } = useStaticQuery(MEDIA_QUERY);
+  const { allFile: { edges } } = useStaticQuery(MEDIA_QUERY);
+  const edge = edges.find((e) => e.node.name === title)
   
   return (
     <div>
@@ -103,7 +109,7 @@ const Player = () => {
       </section>
       <div style={{ display: 'none' }}>
         <ReactAudioPlayer
-          src={publicURL}
+          src={edge.node.publicURL}
           autoPlay={false}
           controls={false}
           ref={playerRef}

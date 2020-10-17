@@ -1,5 +1,6 @@
 ---
 type: pulling-punches
+id: bad-faith
 ---
 
 By _pulling punches_, I'm referring to not living _authentically_.

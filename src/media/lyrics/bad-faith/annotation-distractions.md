@@ -1,5 +1,6 @@
 ---
 type: distractions
+id: bad-faith
 ---
 
 - Anguish = the awareness of our own freedom

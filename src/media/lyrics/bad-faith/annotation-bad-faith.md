@@ -1,5 +1,6 @@
 ---
 type: bad-faith
+id: bad-faith
 ---
 
 To existentialists, _absurdity_ is a technical term that represents the search for answers in an answerless world.

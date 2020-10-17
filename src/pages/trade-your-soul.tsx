@@ -3,9 +3,9 @@ import React from 'react';
 import Song from '../templates/Song'
 import { getLyricsAndAnnotations } from "../utils/getLyricsAndAnnotations";
 
-const BAD_FAITH_QUERY = graphql`
+const QUERY = graphql`
 {
-  allMarkdownRemark(filter: {frontmatter: {id: {eq: "bad-faith"}}}) {
+  allMarkdownRemark(filter: {frontmatter: {id: {eq: "trade-your-soul"}}}) {
     edges {
       node {
         frontmatter {
@@ -20,8 +20,8 @@ const BAD_FAITH_QUERY = graphql`
 }
 `
 
-const Index = () => {
-  const queryResult = useStaticQuery(BAD_FAITH_QUERY);
+const TradeYourSoul = () => {
+  const queryResult = useStaticQuery(QUERY);
   const { lyrics, annotations } = getLyricsAndAnnotations(queryResult);
   
   return <Song
@@ -31,5 +31,5 @@ const Index = () => {
   />
 }
 
-export default Index;
+export default TradeYourSoul;
 

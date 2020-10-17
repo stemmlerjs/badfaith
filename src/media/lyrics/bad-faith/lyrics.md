@@ -1,5 +1,7 @@
 ---
 type: lyrics
+id: bad-faith
+title: Bad Faith
 ---
 You and I / you and me 
 
