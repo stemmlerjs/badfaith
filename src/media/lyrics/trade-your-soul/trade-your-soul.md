@@ -6,11 +6,7 @@ title: Trade Your Soul
 
 Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
-Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
-
 <span id="chant">Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver</span>
-
-Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
 <br/>
 
@@ -41,10 +37,6 @@ You gotta rip a part of your soul
 And that's the trade
 
 <br/>
-
-Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
-
-Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
 Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
