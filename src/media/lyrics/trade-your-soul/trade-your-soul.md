@@ -4,13 +4,13 @@ id: trade-your-soul
 title: Trade Your Soul
 ---
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
-<span id="chant">Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver</span>
+<span id="chant">Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver</span>
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
 <br/>
 
@@ -42,10 +42,10 @@ And that's the trade
 
 <br/>
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
 
-Dumber, smarter, labour, labour, labour, dumber, sadder, cadaver
+Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
