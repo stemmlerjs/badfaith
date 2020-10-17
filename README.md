@@ -1,6 +1,6 @@
 # Bad Faith
 
-> A goth-pop song about Existentialism. Influenced by Jean-Paul Sartre, Albert Camus, Ariel Pink and John Maus.
+> A goth-pop EP about Existentialism. Influenced by Jean-Paul Sartre, Albert Camus, Ariel Pink and John Maus.
 
 [Listen here](http://badfaith.netlify.app/)
 
