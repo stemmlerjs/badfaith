@@ -2,6 +2,7 @@
 type: lyrics
 id: bad-faith
 title: Bad Faith
+track: 1
 ---
 You and I / you and me 
 

@@ -2,6 +2,7 @@
 type: lyrics
 id: trade-your-soul
 title: Trade Your Soul
+track: 2
 ---
 
 Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
@@ -35,6 +36,12 @@ Then you gotta get paid
 You gotta rip a part of your soul
 
 And that's the trade
+
+<br/>
+
+And it's not one I wanna make
+
+We're all kinda forced to anyway
 
 <br/>
 
