@@ -49,8 +49,13 @@ function usePlayer (playerRef) {
   }, [playerRef])
 
   const updateTime = (e) => {
-    setCurrentTime(playerRef.current.audioEl.current.currentTime)
-    setDuration(playerRef.current.audioEl.current.duration)
+    try {
+      setCurrentTime(playerRef.current.audioEl.current.currentTime)
+      setDuration(playerRef.current.audioEl.current.duration)
+    } catch (err) {
+      // Look into why this might error out when I leave the page when
+      // the player is currently playing.
+    }
   }
 
   const play = () => {
