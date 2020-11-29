@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Bad Faith by Khalil Stemmler`,
-    description: `A song about Existentialism.`,
+    description: `A song about Existentialism & Absurdism.`,
     author: `@gatsbyjs`,
   },
   plugins: [
