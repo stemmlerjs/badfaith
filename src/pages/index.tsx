@@ -27,11 +27,10 @@ const Index = () => {
   
   return (
     <Layout>
-      <SEO title={`Bad Faith, a 2-track EP`} />
+      <SEO title={`Bad Faith, a ${songs.length}-track EP`} />
       <img src={badFaithPng}/>
       <blockquote className="album-description">This is a {songs.length}-track <i>in-progress</i> goth-pop EP about 
-      Existentialism. It is influenced by ideas from Jean-Paul Sartre, Albert Camus, Simone de Beauvoir, 
-      and the <a href="https://en.wikipedia.org/wiki/Hypnagogic_pop">hypnagogic recording styles</a> popularized 
+      Existentialism and Absurdism. It is influenced by ideas from Jean-Paul Sartre, Albert Camus, and the <a href="https://en.wikipedia.org/wiki/Hypnagogic_pop">hypnagogic recording styles</a> popularized 
       by Ariel Pink and John Maus.</blockquote>
 
       <div className="tracklist">
