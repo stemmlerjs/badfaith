@@ -2,7 +2,7 @@
 type: lyrics
 id: what-do-you-take-me-for
 title: What Do You Take Me For?
-track: 7
+track: 8
 ---
 
 I've known a lot of girls before
