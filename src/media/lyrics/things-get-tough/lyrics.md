@@ -2,7 +2,7 @@
 type: lyrics
 id: things-get-tough
 title: Things Get Tough
-track: 7
+track: 6
 ---
 Baby, you know I love you so
 

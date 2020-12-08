@@ -36,7 +36,7 @@ export default Song;
 
 export const pageQuery = graphql`
   query GetSongById($id: String!) {
-    allMarkdownRemark(filter: {frontmatter: {id: {eq: $id }}}) {
+    allMarkdownRemark(filter: {frontmatter: { id: { eq: $id }}}) {
       edges {
         node {
           frontmatter {

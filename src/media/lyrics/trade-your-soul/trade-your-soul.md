@@ -2,7 +2,7 @@
 type: lyrics
 id: trade-your-soul
 title: Trade Your Soul
-track: 5
+track: 8
 ---
 
 Dumber, smarter, labor, labor, labor, dumber, sadder, cadaver
