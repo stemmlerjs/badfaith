@@ -53,7 +53,6 @@ const Lyrics = ({ title, lyrics, annotations }) => {
     const scrolled = winScroll + height * 0.20;
 
     if (!models.currentAnnotation) {
-      console.log(models.currentAnnotation)
       setScrollPosition(scrolled);
     }
   }

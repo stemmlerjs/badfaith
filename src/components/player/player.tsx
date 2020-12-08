@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ReactAudioPlayer from 'react-audio-player';
+import { TextUtils } from '../../utils/TextUtils'
 import "./player.sass"
 
 const playButton = require('../../images/Polygon.svg')
@@ -90,8 +91,8 @@ const Player = ({ title }) => {
   const playerRef = useRef(null);
   const { operations, models } = usePlayer(playerRef);
   const { allFile: { edges } } = useStaticQuery(MEDIA_QUERY);
-  const edge = edges.find((e) => e.node.name === title)
-  
+  const edge = edges.find((e) => e.node.name === TextUtils.stripSpecialCharacters(title));
+
   return (
     <div>
       <section className="player-controls">

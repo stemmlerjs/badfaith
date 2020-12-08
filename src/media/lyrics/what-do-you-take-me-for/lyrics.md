@@ -1,7 +1,7 @@
 ---
 type: lyrics
 id: what-do-you-take-me-for
-title: What Do You Take Me For
+title: What Do You Take Me For?
 track: 7
 ---
 
